@@ -1,4 +1,4 @@
-#🚀 FastAPI_C-MaUI - C# MAUI (Frontend) + Python FastAPI (Backend)
+# FastAPI_C-MaUI - C# MAUI (Frontend) + Python FastAPI (Backend)
 
 FastAPI_C-MaUI is a simple cross-platform project demonstrating how to connect a .NET MAUI app (Frontend) with a Python FastAPI backend.
 
