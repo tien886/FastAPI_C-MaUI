@@ -34,7 +34,10 @@ def execute(operation: str, numbers: list[int]) ->int:
 @app.post("/execute_math", response_model=OutputData)
 async def execute_math(data: InputData):
     try:
+        print(data.numbers)
+        print(data.operators)
         result = execute(data.operators, data.numbers)
+        print(result)
         return OutputData(result=result)
     except ValueError as e:
         return {"error": str(e)}
