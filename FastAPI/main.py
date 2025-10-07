@@ -5,6 +5,7 @@ import base64
 app = FastAPI()
 # os.makedirs("JsonVault", exist_ok=True)
 os.makedirs("FastAPI", exist_ok=True)   #Ensure the image storage dir exist 
+#module01
 class InputData(BaseModel):
     numbers: list[int]
     operators: str
@@ -50,7 +51,7 @@ async def execute_math(data: InputData):
     except ValueError as e:
         return {"error": str(e)}
 
-#
+#module02
 class InputImage(BaseModel):
     Base64stringFaceOfUser: str
     UserName: str
