@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               xmlns:viewmodels="clr-namespace:CaptureFace.ViewModels"
+               x:Class="CaptureFace.Views.ChupKhuonMatView"
+               x:DataType="viewmodels:ChupKhuonMatViewModel"
+               CanBeDismissedByTappingOutsideOfPopup="False"
+               Size="900,500"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Color="Transparent">
+    <Border StrokeShape="RoundRectangle 11" BackgroundColor="White">
+
+        <VerticalStackLayout
+            WidthRequest="900"
+            HeightRequest="500"
+            Padding="10"
+            Spacing="5"
+            BackgroundColor="#222"
+            >
+            <!-- Label -->
+            <Label 
+                Text="Ghi danh"
+                TextColor="White"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <!-- Camera Container -->
+            <Border
+                Padding="0"
+                StrokeShape="RoundRectangle 11" 
+                HorizontalOptions="Center">
+                <toolkit:CameraView
+                    HeightRequest="300"
+                    WidthRequest="500"
+                    BackgroundColor="Transparent"
+                    x:Name="Camera"
+                    MediaCaptured="Camera_MediaCaptured"
+                    />
+            </Border>
+    
+            <!-- Close Button -->
+            <Button
+                Text="Chụp"
+                BackgroundColor="LightBlue"
+                TextColor="White"
+                CornerRadius="8"
+                WidthRequest="100"
+                Clicked="CaptureImageClicked" />
+            <HorizontalStackLayout>
+            <Label
+                Text="Nhập mã số sinh viên"
+                />
+            <Entry
+                Text="{Binding MSSV}"
+                WidthRequest="100"
+                />
+                <Label
+                Text="Nhập tên sinh viên"
+                />
+                <Entry
+                Text="{Binding TenSV}"
+                WidthRequest="100"
+                />
+            </HorizontalStackLayout>
+
+            <Button
+                Text="Thoát"
+                BackgroundColor="Red"
+                TextColor="White"
+                CornerRadius="8"
+                WidthRequest="100"
+                Command="{Binding ClosePopupCommand}" />
+        </VerticalStackLayout>
+    </Border>
+</toolkit:Popup>
