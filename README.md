@@ -25,7 +25,7 @@ A seamless bridge for **image transmission** between MAUI and FastAPI:
 
 ```mermaid
 sequenceDiagram
-    participant MAUI as C# MAUI App
+        participant MAUI as CSharp
     participant API as FastAPI Server
     participant FS as File System
 
