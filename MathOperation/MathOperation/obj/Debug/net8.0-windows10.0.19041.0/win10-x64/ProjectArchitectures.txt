@@ -1,1 +1,0 @@
-E:\UIT_AUTUMN2025-2026\IT008\FastAPI_C#MaUI\MathOperation\MathOperation\MathOperation.csproj;x64
